@@ -786,7 +786,15 @@ enum enum_stmt_attr_type
     Amount of rows to retrieve from server per one fetch if using cursors.
     Accepts unsigned long attribute in the range 1 - ulong_max
   */
-  STMT_ATTR_PREFETCH_ROWS
+  STMT_ATTR_PREFETCH_ROWS,
+  /* MariaDB only */
+  STMT_ATTR_PREBIND_PARAMS=200,
+  STMT_ATTR_ARRAY_SIZE,
+  STMT_ATTR_ROW_SIZE,
+  STMT_ATTR_STATE,
+  STMT_ATTR_CB_USER_DATA,
+  STMT_ATTR_CB_PARAM,
+  STMT_ATTR_CB_RESULT
 };
 
 MYSQL_STMT * STDCALL mysql_stmt_init(MYSQL *mysql);
